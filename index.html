@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PW Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <label for="password">Password Length</label>
+      <input type="number" min="8" max="25" id="length" class="length" />
 
-        <table>
-        <tr>
-            <td><label for="password">your password is: </label></td>
-            <td><input type="text"></td>
-        </tr>
+      <label for="errorText" class="errorText" id="errorText"></label>
 
-        <tr>
-            <td><label for="password">your password length: </label></td>
-            <td><input type="number" id="length"></td>
-        </tr>
+      <div class="sub-container">
+        <input type="checkbox" id="upper" />
+        <label for="password">Uppercase letters</label>
+      </div>
 
+      <div class="sub-container">
+        <input type="checkbox" id="lower" />
+        <label for="password">Lowercase letters</label>
+      </div>
 
-        <tr>
-            <td><input type="checkbox" id="upper"></td>
-            <td><label for="password">Uppercase letters </label></td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" id="lower"></td>
-            <td><label for="password">Lowercase letters </label></td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" id="num"></td>
-            <td><label for="password">Numbers</label></td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" id="char"></td>
-            <td><label for="password">Characters</label></td>
-        </tr>
-        <tr>
-            <td><button type="button" onclick="generate()">Generate Password</button></td>
-            <td><button onclick="copy()">Copy Password</button></td>
-        </tr>
-        </table>
-        
+      <div class="sub-container">
+        <input type="checkbox" id="numbers" />
+        <label for="password">Numbers</label>
+      </div>
 
-    </form>
+      <div class="sub-container">
+        <input type="checkbox" id="symbols" />
+        <label for="password">Symbols</label>
+      </div>
 
-    <script src="app.js"></script>
-</body>
+      <button type="button" onclick="generate()">Generate & Copy</button>
+
+      <label for="password">Password Generated</label>
+      <label id="generated_password"></label>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
