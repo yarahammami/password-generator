@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <table>
+        <tr>
+            <td><label for="password">your password is: </label></td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td><label for="password">your password length: </label></td>
+            <td><input type="number" id="length"></td>
+        </tr>
+
+
+        <tr>
+            <td><input type="checkbox" id="upper"></td>
+            <td><label for="password">Uppercase letters </label></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="lower"></td>
+            <td><label for="password">Lowercase letters </label></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="num"></td>
+            <td><label for="password">Numbers</label></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="char"></td>
+            <td><label for="password">Characters</label></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="generate()">Generate Password</button></td>
+            <td><button onclick="copy()">Copy Password</button></td>
+        </tr>
+        </table>
+        
+
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
